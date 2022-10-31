@@ -1,0 +1,32 @@
+@mixin test($colory: white) {
+  height: 150px;
+  width: 600px;
+  background-color: $colory;
+  font-size: 50px;
+  margin: 10px auto;
+  text-align: center;
+  border-radius: 5%;
+  padding: 0px;
+}
+
+.pass {
+  @include test($colory: green);
+  margin-left: 50px;
+  padding-top: 0px;
+  // margin-bottom: 50px;
+}
+.fail {
+  @include test($colory: red);
+}
+@mixin test1($colory1: black) {
+  margin: 20px auto;
+  border: 125px;
+  border-color: black;
+  height: 500px;
+  background-color: $colory1;
+
+  width: 90%;
+}
+.main {
+  @include test1($colory1: purple);
+}
